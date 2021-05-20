@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particles</title>
+    <script src="libs/jq.js"></script>
+    <script src="threejs/three.js"></script>
+    <script src="js3D/Config/OrbitControls.js"></script>
+    <script src="js3D/Particles/Particle.js"></script>
+    <script src="js3D/Particles/Particles.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div id="hud">
+        <div id="controls">
+            <label>Speed: </label><input type="range" name="speed" id="speed" min=0 max=20 value=10>
+            <label>Width: </label><input type="range" name="width" id="width" min=1 max=150 value=20>
+            <label>Amount: </label><input type="range" name="amount" id="amount" min=1 max=200 value=50>
+        </div>
+    </div>
+    <div id="root"></div>
+</body>
+
+</html>

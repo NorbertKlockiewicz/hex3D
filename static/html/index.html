@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hex Level Editor</title>
+    <script src="libs/jq.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/hex.js"></script>
+    <script src="js/net.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="title">
+        <h1>Hex Level Editor</h1>
+    </div>
+    <div id="menu">
+        <h2>AMOUNT</h2>
+        <hr>
+        <select onchange="ui.DrawView($(this).val())" id="selecthex_count">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+        </select>
+        <h2>SERVER</h2>
+        <hr>
+        <button onclick="net.Get()">Wczytaj z serwera</button>
+        <button onclick="net.Send('/')">Wyslij na serwer</button>
+        <h2>GAME</h2>
+        <hr>
+        <button onclick="location.href='/Game'" type="button" class="Button3D">Game</button>
+        <button onclick="location.href='/Hex'" type="button" class="Button3D">Hex</button>
+        <button onclick="location.href='/Player'" type="button" class="Button3D">Simple Player Movement</button>
+        <button onclick="location.href='/Ally'" type="button" class="Button3D">Simple Ally Movement</button>
+        <button onclick="location.href='/Particles'" type="button" class="Button3D">Particles</button>
+        <h2>TYPE</h2>
+        <hr>
+        <button onclick="blocktype='WALLS';$('#clicked').attr('id','');$(this).attr('id','clicked')"
+            id="clicked">Walls</button>
+        <button onclick="blocktype='ENEMY';$('#clicked').attr('id','');$(this).attr('id','clicked')">Enemy</button>
+        <button
+            onclick="blocktype='TREASURE';$('#clicked').attr('id','');$(this).attr('id','clicked')">Treasure</button>
+        <button onclick="blocktype='LIGHT';$('#clicked').attr('id','');$(this).attr('id','clicked')">Light</button>
+    </div>
+    <pre id="table"></pre>
+    <div id="main"></div>
+    <div id="footer">
+        <h1>Norbert Klockiewicz</h1>
+    </div>
+</body>
+
+</html>

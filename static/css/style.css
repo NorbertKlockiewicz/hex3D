@@ -1,0 +1,138 @@
+body
+{
+    background: #999999;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+}
+#title,#footer{
+  width:100%;
+  height:100px;
+  background-color: #000000;
+  color:white;
+  margin:0;
+  padding:0;
+  text-align: center;
+  line-height: 2;
+}
+h1{
+  margin:0;
+  font-size:50px;
+}
+#menu{
+  min-height:937px;
+  height:100%;
+  background-color: #444444;
+  display:block;
+  width:200px;
+  margin:0;
+  padding:0;
+  float:left;
+  text-align:center;
+}
+#table{
+  min-height:1020px;
+  max-height:1020px;
+  overflow: scroll;
+  height:100%;
+  background-color: #eeeeee;
+  width:200px;
+  padding:0;
+  margin:0;
+  float:left;
+
+}
+#controls{
+  position:absolute;
+  width:100%;
+  background-color: black;
+  top:0;
+  height:50px;
+  color:#ffffff;
+  text-align:center;
+  font-size:30px;
+  z-index: 2;
+}
+#hud{
+    z-index: 2;
+    margin:0;
+    padding:0;
+}
+#main{
+  clear:both;
+  margin-left:200px;
+}
+.hexagon {
+    transform: rotate(90deg);
+    width: 100px; 
+    height: 57.74px;
+    background-color: lightslategray;
+    margin: 28.87px 0;
+    z-index:2;
+  }
+  button{
+    margin-top:10px;
+    width:100%;
+  }
+  
+  .hexagon:before,
+  .hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+  }
+  
+  .hexagon:before {
+    bottom: 100%;
+    border-bottom: 28.87px solid lightslategray;
+  }
+  
+  .hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 28.87px solid lightslategray;
+  }
+  .arrow
+  {
+      position: relative;
+      transform: rotate(-90deg);
+      width:45px;
+      left:10px;
+      top:15px;
+  }
+  #selecthex_count
+  {
+    width: 100%;
+
+  }
+  .Button3D
+  {
+    color:red;
+  }
+
+ 
+  #root
+{
+    z-index:1;
+    position: absolute;
+    margin:0;
+    padding:0;
+}
+button,select{
+  height:50px;
+  background:black;
+  color:white;
+  font-size:16px;
+  border:2px solid blue;
+  border-radius:20px;
+  cursor: pointer;
+}
+button:hover{
+  background-color:#777777;
+}
+#clicked{
+  background-color: white;
+  color:black;
+}
